@@ -23,7 +23,9 @@ gaze_xyz.mat - The same as head_xyz.mat but the gaze points are recorded using e
 
 robot_trajectory_xyz.mat - The same as head_xyz.mat but the results are from a human-robot control expirement - The accuracy is benchmarked against the robots tcp.
 
-The repository also contains the raw data. This data has the following form:
+The repository does not contain all the raw data due to the sheer size ( 30 trials with more than 20 minutes at 100 Hz Samplerates).  
+Upon Request i am happily shareing these raw data files. One set for either trial is included in this repository.
+This data has the following form:
 SLAM_Quali_recording_xyz.csv 
  - Q1_w, Q2_w, Q3_w, Q4_w - Inertial only orientation Quaterions
  - Q1_fused, Q2_fused, Q3_fused, Q4_fused - Inertial only orientation Quaterions
