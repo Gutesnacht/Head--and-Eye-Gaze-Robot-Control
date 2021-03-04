@@ -22,3 +22,20 @@ Struct with fields:
 gaze_xyz.mat - The same as head_xyz.mat but the gaze points are recorded using eye-gaze
 
 robot_trajectory_xyz.mat - The same as head_xyz.mat but the results are from a human-robot control expirement - The accuracy is benchmarked against the robots tcp.
+
+The repository also contains the raw data. This data has the following form:
+SLAM_Quali_recording_xyz.csv 
+ - Q1_w, Q2_w, Q3_w, Q4_w - Inertial only orientation Quaterions
+ - Q1_fused, Q2_fused, Q3_fused, Q4_fused - Inertial only orientation Quaterions
+ - Q1_Quali, Q2_Quali, Q3_Quali, Q4_Quali - Inertial only orientation Quaterions
+ - x_fused, y_fused, z_fused - Visual Position Estimation 
+ - x_quali, y_quali, z_quali - Qualisys Motion Caputre Position Estimation 
+ - x_target, y_target, z_target - Gaze Point estimation (either head or eye gaze)
+ - in_surface - Toggle if gaze is in surface (toggled from human)
+ - QTimeSec_q, QTimeNSec_q - Unix Timestamps
+ - (some have optional further fields):
+    - vslamQ1, vslamQ2, vslamQ3, vslamQ4 - Visual only orientation Quaternions
+    - fused - Flag to indicate wheter the SLAM orientation is fused with inertial or not.
+ 
+ Ground Truth Target Position estimates as .mat
+  - 24 Target positions (in x,y,z) - adapted using the assets field to account for orientation and position changes from calibration errors.
